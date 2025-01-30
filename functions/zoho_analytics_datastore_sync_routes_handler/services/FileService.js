@@ -9,6 +9,7 @@ class FileService {
     if (!fs.existsSync(this.#tempDir)) {
       fs.mkdirSync(this.#tempDir, {
         recursive: true
+        recursive: true
       })
     }
   }
@@ -18,6 +19,7 @@ class FileService {
   }
 
   getTempDirectory = () => {
+    return this.#tempDir
     return this.#tempDir
   }
 

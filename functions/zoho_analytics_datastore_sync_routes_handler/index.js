@@ -17,7 +17,7 @@ app.use((req, res, next) => {
     if (url.startsWith('/import-analytics')) {
       const reqQuery = req.query
       if (!AuthService.getInstance().isValidRequest(reqQuery[AppConstants.Headers.CodelibSecretKey])) {
-        throw new AppError(401, "You don't have permission to perform this operation. Kindly contact your administrator for more details.")
+        throw new AppError(null, "You don't have permission to perform this operation. Kindly contact your administrator for more details.")
       }
     } else {
       if (!AuthService.getInstance().isValidRequest(req.get(AppConstants.Headers.CodelibSecretKey))) {
